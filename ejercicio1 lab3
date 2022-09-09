@@ -1,0 +1,33 @@
+use std::io::stdin;
+fn main() {
+    println!("ingrese su codigo: ");
+    let mut code: String = String::new();
+    stdin().read_line(&mut code).unwrap();
+    let num:u32 = code 
+        .trim()
+        .parse()
+        .unwrap();
+    if code > 9.to_string() {
+        Err(());
+            println!("Error, vuelva a ingresar el codigo.")
+        } else {
+            Ok(()); 
+    }
+}
+
+fn separacion_digitos() {
+    let mut split = code.split();
+    for s in split {
+    }
+    let vec = split.collect::<Vec<&str>>();
+}
+
+fn operacion() {
+
+}
+
+fn resultado() {
+
+}
+
+// unfinnished :(
