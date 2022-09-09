@@ -1,0 +1,21 @@
+use std::io::stdin;
+fn main() {
+    println!("Recuerde que las cadenas dE ADN contienen solamente los nucleotidos A, T, C, G. Trabaje con ellos");
+    println!("ingrese su cadena de ADN: ");
+    let mut adn: String = String::new();
+    stdin().read_line(&mut adn).unwrap();
+}
+
+fn reemplazo() {
+    let l1 = "A";
+    let l2 = "T";
+    let l3 = "C";
+    let l4 = "G";
+    let mut result = (l1.replace("A", "U"),
+    l2.replace("T", "A"), 
+    l3.replace("C", "G"), 
+    l4.replace("G", "C"));
+    println!("Su cadena resulta ser: {}", ::result);
+}
+
+// unfinished :(
