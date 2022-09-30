@@ -1,0 +1,27 @@
+use rand::{Rng, rngs::ThreadRng};
+  
+fn main() {
+    let mut rdm: ThreadRng = rang::thread_rng();
+    let mut num: i32 = 0;
+    for t: i32 in 0..1{
+    let num: u8 = rng.gen_range(0..11);
+    println!("El Jugador Uno derribó {} palitroques", num);
+    if x == 0{
+        let t: i32 = 1;
+    }else{
+        for t: i32 in 0..1{
+            let num: u8 = rng.gen_range(0..x);
+            println!("El Jugador Uno derribó {} palitroques", num);
+        }
+    }
+}
+}
+fn random() {
+    let mut rng = rand::thread_rng();
+      
+    for _x in 0..5{
+    let num: u8 = rng.gen_range(0..10);
+    }
+}
+
+// usar rand = "0.8.3" en cargo, debajo de dependencies
