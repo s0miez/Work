@@ -1,0 +1,27 @@
+static LOREM_IPSUM: &str =
+    "Pepito: 5.3:3.7:6.7:6.7:6.1:5.5 APROBADO
+Juanito: 5.5:5.2:2.0:5.6:6.0:2.0 APROBADO
+María: 6.1:6.6:6.4:5.1:5.8:6.3 APROBADO
+Joselito: 5.2:4.7:1.8:3.5:2.7:4.5 REPROBADO
+";
+
+use std::fs::File;
+use std::io::prelude::*;
+use std::path::Path;
+
+fn main() {
+    let path = Path::new("notas.txt");
+    let display = path.display();
+
+    // Open a file in write-only mode, returns `io::Result<File>`
+    let mut file = match File::create(&path) {
+        Err(why) => panic!("couldn't create {}: {}", display, why),
+        Ok(file) => file,
+    };
+
+    // Write the `LOREM_IPSUM` string to `file`, returns `io::Result<()>`
+    match file.write_all(LOREM_IPSUM.as_bytes()) {
+        Err(why) => panic!("couldn't write to {}: {}", display, why),
+        Ok(_) => println!("successfully wrote to {}", display),
+    }
+}
